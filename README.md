@@ -5,6 +5,9 @@
 A Python package which groups similar camera imagery using a cosine similarity matrix and a
 time-based threshold.
 
+Currently uses a pre-trained efficienet model to encode the feature vectors for the image. A
+pair-wise cosine similarity metric is computed using the feature vectors.
+
 ![alt text](assets/image.png)
 
 ## TODO
