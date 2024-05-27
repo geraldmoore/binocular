@@ -21,7 +21,7 @@ Clone repository, change directory into the root, and `pip` install.
 pip install .
 ```
 
-## Example
+## Examples
 
 Images to group should sit inside a separate directory, for example `"/path/to/image/dir"`. Use the
 `ext` argument to specify the image extension type, for example `ext="JPG"`.
@@ -35,6 +35,8 @@ specify the similarity threshold, use the argument `similarity_threshold`. The h
 the more constrained similar images will be and the smaller the group size. The lower this value,
 the larger the groups. This value is applied to the cosine similarity matrix so use this to
 understand what the appropriate threshold should be.
+
+### Group images within a directory
 
 To run grouping on an input directory containing images:
 
@@ -62,6 +64,8 @@ data = GroupBy(
     datetime_key=datetime_key,
 ).apply(data=data)  # Results in the same list as above, but with an additional group key
 ```
+
+### Compute only the similarity matrix
 
 If you would like to get the similarity matrix first in order to understand the best threshold
 value, extract out the feature vectors into an array and use `compute_cosine_similarity`:
