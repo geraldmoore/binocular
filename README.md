@@ -5,16 +5,26 @@
 A Python package which groups similar camera imagery using a cosine similarity matrix and a
 time-based threshold.
 
+![alt text](assets/image.png)
+
 ## TODO
 
 - [ ] Speed up feature encoding. Currently feature extraction uses a model that runs serially for
-each image. This can be batched to massively speed up how long it takes to process a large number 
+each image. This can be batched to massively speed up how long it takes to process a large number
 of images.
+
+## Install
+
+Clone repository, change directory into the root, and `pip` install.
+
+```bash
+pip install .
+```
 
 ## Example
 
-Images to group should sit inside a separate directory, for example `"/path/to/image/dir"`. Use the 
-`ext` argument to specify the image extension type, for example `ext="JPG"`. 
+Images to group should sit inside a separate directory, for example `"/path/to/image/dir"`. Use the
+`ext` argument to specify the image extension type, for example `ext="JPG"`.
 
 Grouping uses both time and a cosing similarity metric. To specify the time window for two images to
 be allowed to be considered similar, provide a datetime key which corresponds to the image creation
